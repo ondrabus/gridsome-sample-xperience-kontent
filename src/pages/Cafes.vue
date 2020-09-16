@@ -54,7 +54,7 @@ query Cafes {
     edges {
       node {
         id
-        name
+        cafename
         cafephoto {
           url
         }

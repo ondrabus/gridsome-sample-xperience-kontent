@@ -5,7 +5,7 @@ export function mapCafe (cafe) {
   const countryWithState = cafe.country + (cafe.state ? `, ${cafe.state}` : '')
   const location = `${cafe.cafecity}, ${countryWithState}`
   return {
-    name: cafe.name,
+    name: cafe.cafename,
     photo: cafe.cafephoto[0] ? cafe.cafephoto[0].url : "/images/default-cafe.jpg",
     street: cafe.cafestreet,
     city: cafe.cafecity,
