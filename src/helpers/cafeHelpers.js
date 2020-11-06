@@ -1,18 +1,15 @@
 export function mapCafe (cafe) {
-  let parsed = cafe.cafecountry.split(';');
-  cafe.country = parsed[0];
-  cafe.state = parsed[1] ?? '';
   const countryWithState = cafe.country + (cafe.state ? `, ${cafe.state}` : '')
-  const location = `${cafe.cafecity}, ${countryWithState}`
+  const location = `${cafe.city}, ${countryWithState}`
   return {
-    name: cafe.cafename,
-    photo: cafe.cafephoto[0] ? cafe.cafephoto[0].url : "/images/default-cafe.jpg",
-    street: cafe.cafestreet,
-    city: cafe.cafecity,
-    zipCode: cafe.cafezipcode,
+    name: cafe.name,
+    photo: cafe.photo[0] ? cafe.photo[0].url : "/images/default-cafe.jpg",
+    street: cafe.street,
+    city: cafe.city,
+    zipCode: cafe.zipCode,
     country: cafe.country,
     state: cafe.state,
-    phone: cafe.cafephone,
+    phone: cafe.phone,
     dataAddress: `${cafe.city}, ${cafe.street}`,
     countryWithState,
     location
