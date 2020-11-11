@@ -53,17 +53,16 @@ query Cafes {
   {
     edges {
       node {
-        name
         id
-        photo {
+        cafename
+        cafephoto {
           url
         }
-        country
-        state
-        street
-        city
-        zipCode
-        phone
+        cafecountry
+        cafestreet
+        cafecity
+        cafezipcode
+        cafephone
       }
     }
   }
